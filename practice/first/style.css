@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.navbar {
+    background-color: #263343;
+    /* color: white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.navbar_logo {
+    font-size: 24px;
+}
+
+.navbar_logo i {
+    color:rgb(233, 156, 74);
+}
+
+.navbar_options {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    
+}
+
+.navbar_options li {
+    padding: 8px 12px;
+}
+
+.navbar_options li:hover {
+    background-color:rgb(233, 156, 74);
+    border-radius: 4px;
+}
+.navbar_icons {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+}
+.navbar_icons i {
+    padding: 8px;
+}
+.navbar_toggle {
+    color:rgb(233, 156, 74);
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    display: none;
+}
+
+.navbar_toggle:hover {
+    background-color: aqua;
+}
+@media screen and (max-width: 780px) {
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar_options {
+        display: none;
+        flex-direction: column;
+        text-align: center; 
+        width: 100%;
+    }
+
+    .navbar_icons {
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar_toggle {
+        display: block;
+    }
+
+    .navbar_options.active, 
+    .navbar_icons.active {
+        display: flex;
+    }
+    
+}
