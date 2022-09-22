@@ -1,0 +1,22 @@
+header {
+    background-color: rgb(41, 22, 106);
+    color : white;
+    display : flex;
+    flex-direction: row;
+    flex-wrap : wrap;
+    justify-content: space-between;
+    align-items:center;
+    height: 15vh;
+}
+
+.site_name {
+    font-size: 1.5rem;
+    display: flex;
+    margin-left: 3%;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
