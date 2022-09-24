@@ -1,0 +1,217 @@
+:root {
+    /* Color */
+    --white-color: rgb(255,255,255);
+    --black-color: rgb(18,9,0);
+    --blue-color: rgb(14,87,188);
+    --red-color: rgb(221,8,6);
+    --grey-dark-color: rgb(164, 164, 164);
+    --grey-light-color: rgb(241,243,245); 
+
+    /* Size */
+    --side-padding: 12px;
+    --avatar-size: 36px;
+
+    /* Font size */
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;     /*padding이나 margin을 주었을때
+                                padding과 margin이 box에 포함되도록*/
+}
+
+body{ 
+    font-family: Roboto;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+button :focus{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--side-padding);
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+header .logo i {
+    color: var(--red-color);
+}
+
+header .icons .fa-search {
+    margin-right: var(--side-padding);
+}
+
+
+
+/* Video Player*/
+.player {
+    position: sticky;
+    top: 0;
+
+    text-align: center;
+    background-color: var(--black-color);
+}
+.player video {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+body > .info {
+    padding: var(--side-padding);
+}
+.info .metadata .hashtags {
+    display: flex;
+    color: var(--blue-color);
+}
+
+.info .metadata .hashtags li{
+    margin-right: var(--side-padding);
+    font-size: var(--font-small);
+}
+
+.info .metadata .titleAndbutton {
+    font-size: var(--font-medium);
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .metadata .titleAndbutton .title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-right: var(--side-padding);
+}
+
+.info .metadata .titleAndbutton .moreBtn {
+    height: 100%;
+}
+
+.info .metadata .views{
+    color: var(--grey-dark-color);
+    font-size: var(--font-small);
+}
+
+/* Actions */
+.info .actions {
+    display: flex;
+    justify-content: space-around;
+    margin: var(--side-padding) 0;
+}
+
+.info .actions button {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-small);
+}
+
+.info .actions button i{
+    margin: 0 auto;
+    margin-bottom: calc(var(--side-padding) / 2);
+    font-size: 16px;
+    color: var(--grey-dark-color);)
+}
+
+.info .actions button i .active {
+    color: var(--blue-color);
+}
+
+/* Channel Description */
+.channel {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+}
+
+.channel .metadata {
+    display: flex;
+    align-items: center;
+}
+.channel .metadata .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.channel .metadata .info .name{
+    font-size: var(--font-medium);
+}
+
+.channel .metadata .info .subscribers {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+.channel .metadata img {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+}
+
+.channel .subscribe {
+    text-transform: uppercase;
+    color: var(--red-color);
+    font-size: var(--font-medium);
+}
+
+/* up Next */
+.UpNext > .title {
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+    margin-bottom: var(--side-padding);
+}
+
+.UpNext .item {
+    display: flex;
+}
+
+.UpNext .item .img {
+    flex: 1 1 35%;
+}
+.UpNext .item .img img{
+    width: 100%;
+}
+.UpNext .item .info{
+    flex: 1 1 60%;
+}
+
+.UpNext .item .moreBtn {
+    flex: 1 1 5%; 
+}
+
+.UpNext .item .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.UpNext .item .info .name,
+.UpNext .item .info .view {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.infoAndUpNext {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1080px) {
+    .infoAndUpNext {
+        flex-direction: row;
+        margin: var(--side-padding) 0;
+    }
+}
