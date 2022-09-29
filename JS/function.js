@@ -96,7 +96,7 @@ function upgradeUser(user) {
 
 // 1. Function expression
 // a function declaration can be called ealier than it is defined. (hoisted)
-//a function expression is created when the execution reaches it
+// a function expression is created when the execution reaches it
 const print = function () { // anonymous function
     console.log('print');
 };
