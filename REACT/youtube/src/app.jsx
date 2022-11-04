@@ -19,7 +19,14 @@ function App() {
   }, []);
 
   
-  return <VideoList videos={videos} />;
+  return <>
+    {/* <Searchtext /> */}
+    <div className="navbar">
+      <span>Youtube</span>
+      
+    </div>
+    <VideoList videos={videos} />
+  </>;
 }
 
 export default App;
